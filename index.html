@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calor de Baddie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        background: #e8f2ff; /* pastel blue */
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #1a1a1a;
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        background: linear-gradient(to bottom, #d7e9ff, #e8f2ff);
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        color: #0f1f3d;
+    }
+
+    .emoji-line {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    /* CARD STYLE */
+    .card {
+        background: white;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+
+    .card-header {
+        padding: 20px;
+        background: #f5f9ff;
+        cursor: pointer;
+        border-bottom: 1px solid #dce7ff;
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 28px;
+        color: #0f1f3d;
+    }
+
+    /* COLLAPSIBLE */
+    .content {
+        padding: 20px;
+        display: none;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .info {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #1a2a4d;
+    }
+
+    .spanish {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #2b3d66;
+    }
+
+    footer {
+        text-align: center;
+        margin: 80px 0 40px;
+        font-size: 18px;
+        opacity: 0.7;
+    }
+</style>
+
+<script>
+    function toggleContent(id) {
+        const section = document.getElementById(id);
+        section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Calor de Baddie</h1>
+    <div class="emoji-line">☀️🌊🏖️🌴🍉🚗🎶💃🕶️✨</div>
+    <p style="text-align:center; font-size:20px; margin-top:20px;">
+        A Summer Playlist Curated by <strong>Shamor Johnson</strong>
+    </p>
+</div>
+
+<!-- CARD TEMPLATE (Repeated for all 10 songs) -->
+
+<!-- 1 -->
+<div class="card">
+    <img src="https://i.pinimg.com/1200x/ba/74/2e/ba742eb11120e0ffa179712646017684.jpg">
+    <div class="card-header" onclick="toggleContent('c1')">
+        <h2>1. I Like It</h2>
+    </div>
+    <div class="content" id="c1">
+        <div class="info">Artist: Cardi B, Bad Bunny y J Balvin • Estados Unidos 🇺🇸</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene mucha energía y un ritmo divertido.<br>
+            Para mí, esta canción representa el verano porque me hace bailar con mis amigos.
+        </div>
+    </div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/a6/64/24/a664245df4a5b63488ffe2e12511f624.jpg">
+    <div class="card-header" onclick="toggleContent('c2')">
+        <h2>2. Bodega Baddie</h2>
+    </div>
+    <div class="content" id="c2">
+        <div class="info">Artist: Cardi B • Estados Unidos 🇺🇸</div>
+        <div class="spanish">
+            Me gusta esta canción porque me hace sentir segura y poderosa.<br>
+            Esta canción me recuerda al verano porque tiene una vibra divertida y moderna.
+        </div>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/ef/4f/c5/ef4fc5e805ed3bca51db350a7277da16.jpg">
+    <div class="card-header" onclick="toggleContent('c3')">
+        <h2>3. Provenza</h2>
+    </div>
+    <div class="content" id="c3">
+        <div class="info">Artist: Karol G • Colombia 🇨🇴</div>
+        <div class="spanish">
+            Me gusta esta canción porque es relajante y alegre.<br>
+            Para mí, esta canción suena como unas vacaciones de verano en la playa.
+        </div>
+    </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/1f/64/e3/1f64e3b050a6c147b3e0476c66fd1b85.jpg">
+    <div class="card-header" onclick="toggleContent('c4')">
+        <h2>4. Si Antes Te Hubiera Conocido</h2>
+    </div>
+    <div class="content" id="c4">
+        <div class="info">Artist: Karol G • Colombia 🇨🇴</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene un ritmo tropical muy divertido.<br>
+            Esta canción me hace pensar en días soleados y fiestas de verano.
+        </div>
+    </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/eb/f7/a7/ebf7a71bb0319844809efbade4a8ce84.jpg">
+    <div class="card-header" onclick="toggleContent('c5')">
+        <h2>5. MAMIII</h2>
+    </div>
+    <div class="content" id="c5">
+        <div class="info">Artist: Becky G y Karol G • Estados Unidos 🇺🇸</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene mucha confianza y actitud.<br>
+            Para mí, esta canción es perfecta para escuchar durante el verano.
+        </div>
+    </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/58/d4/a0/58d4a08f57273b7933cd4fb90f7fec34.jpg">
+    <div class="card-header" onclick="toggleContent('c6')">
+        <h2>6. Callaita</h2>
+    </div>
+    <div class="content" id="c6">
+        <div class="info">Artist: Bad Bunny • Puerto Rico 🇵🇷</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene un ritmo tranquilo y pegajoso.<br>
+            Esta canción me recuerda a las noches de verano cerca del mar.
+        </div>
+    </div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/23/53/68/235368a22d2a008913617f5a1ec60404.jpg">
+    <div class="card-header" onclick="toggleContent('c7')">
+        <h2>7. Bichota</h2>
+    </div>
+    <div class="content" id="c7">
+        <div class="info">Artist: Karol G • Colombia 🇨🇴</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene mucha confianza y energía.<br>
+            Para mí, esta canción representa el verano porque me hace sentir feliz y segura de mí misma.
+        </div>
+    </div>
+</div>
+
+<!-- 8 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/7d/70/ba/7d70ba4811285923a95eae9b0056eb57.jpg">
+    <div class="card-header" onclick="toggleContent('c8')">
+        <h2>8. Telepatía</h2>
+    </div>
+    <div class="content" id="c8">
+        <div class="info">Artist: Kali Uchis • Estados Unidos 🇺🇸</div>
+        <div class="spanish">
+            Me gusta esta canción porque es tranquila y bonita.<br>
+            Esta canción me hace pensar en tardes relajadas durante el verano.
+        </div>
+    </div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+    <img src="https://radiolive247.ro/wp-content/uploads/2018/09/dj_snake.jpg">
+    <div class="card-header" onclick="toggleContent('c9')">
+        <h2>9. Taki Taki</h2>
+    </div>
+    <div class="content" id="c9">
+        <div class="info">Artist: DJ Snake, Ozuna, Cardi B y Selena Gomez • Francia 🇫🇷</div>
+        <div class="spanish">
+            Me gusta esta canción porque tiene un ritmo muy emocionante.<br>
+            Para mí, esta canción es perfecta para bailar en una fiesta de verano.
+        </div>
+    </div>
+</div>
+
+<!-- 10 -->
+<div class="card">
+    <img src="https://i.pinimg.com/736x/39/90/ca/3990caf411aa8ddcca0f73a22b96ab61.jpg">
+    <div class="card-header" onclick="toggleContent('c10')">
+        <h2>10. Con Calma</h2>
+    </div>
+    <div class="content" id="c10">
+        <div class="info">Artist: Daddy Yankee • Puerto Rico 🇵🇷</div>
+        <div class="spanish">
+            Me gusta esta canción porque es alegre y divertida.<br>
+            Esta canción me recuerda a los viajes y las aventuras de verano.
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Calor de Baddie — Curated by Shamor Johnson
+</footer>
+
+</body>
+</html>
